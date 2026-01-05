@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+body.photo-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f4ffc9 0%, #ffb6c1 120%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 删除所有导航栏相关样式 */
+/* 导航栏样式由 style.css 统一控制 */
+
+/* 只保留相册页面特有的样式 */
+.imgArea {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-25%); }
+    45% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    70% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    95% { transform: translateX(-75%); }
+    100% { transform: translateX(0%); }
+}
+
+.slide-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot:nth-child(1) {
+    animation: dot1 12s infinite;
+}
+.dot:nth-child(2) {
+    animation: dot2 12s infinite;
+}
+.dot:nth-child(3) {
+    animation: dot3 12s infinite;
+}
+.dot:nth-child(4) {
+    animation: dot4 12s infinite;
+}
+
+@keyframes dot1 {
+    0%, 20% { background-color: rgba(255, 255, 255, 0.9); }
+    25%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot2 {
+    0%, 20% { background-color: rgba(255, 255, 255, 0.5); }
+    25%, 45% { background-color: rgba(255, 255, 255, 0.9); }
+    50%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot3 {
+    0%, 45% { background-color: rgba(255, 255, 255, 0.5); }
+    50%, 70% { background-color: rgba(255, 255, 255, 0.9); }
+    75%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot4 {
+    0%, 70% { background-color: rgba(255, 255, 255, 0.5); }
+    75%, 95% { background-color: rgba(255, 255, 255, 0.9); }
+    100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+
+.titlearea {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.titlearea h2 {
+    color: #333;
+    font-size: 28px;
+    margin: 0;
+}
+
+.photoArea {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.photoArea img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.photoArea img:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border-color: hotpink;
+}
+
+.footer {
+    background-color: transparent;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover .zhuyebth,
+.btn-link:hover .denglubtn {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+    .imgArea {
+        height: 200px;
+    }
+    
+    .titlearea h2 {
+        font-size: 22px;
+        padding: 0 15px;
+    }
+    
+    .photoArea {
+        width: 95%;
+        gap: 15px;
+        padding: 10px 0;
+    }
+    
+    .photoArea img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .footer {
+        padding: 20px 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .photoArea {
+        width: 95%;
+        max-width: 900px;
+    }
+    
+    .photoArea img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+}

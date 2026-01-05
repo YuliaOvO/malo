@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>吗喽博客 - 给吗喽留言</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="message.css" />
+</head>
+<body class="blog-page">
+    <div class="logarea">
+        <div class="logarealeft">吗喽的个人博客</div>
+        <div class="logarearight">
+            <a href="blog.html" class="btn-link">
+                <div class="zhuyebth">
+                    <img src="images/zhuye.png" alt="主页" width="20" height="20" />
+                    <span>主页</span>
+                </div>
+            </a>
+            <a href="login.html" class="btn-link">
+                <div class="denglubtn">
+                    <img src="images/denglu.png" alt="登录" width="20" height="20" />
+                    <span>登录</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="navarea">
+        <div class="navbth">
+            <a href="blog.html">关于吗喽</a>
+        </div>
+        <div class="navbth">
+            <a href="photo.html">吗喽相册</a>
+        </div>
+        <div class="navbth">
+            <a href="hometown.html">吗喽家乡</a>
+        </div>
+        <div class="navbth" style="color:palevioletred;font-weight: bold;">
+            <a href="message.html" style="color: palevioletred;">给吗喽留言</a>
+        </div>
+    </div>
+    
+    <div class="imgArea">
+        <img src="images/猴子动态.gif" alt="猴子动态图片" />
+    </div>
+    
+    <div class="message-IeaveWoldArea">
+        <h2>给吗喽留言</h2>
+        <form action="#" method="post" class="message-IwForm">
+            <div class="message-form-group">
+                <span>姓名</span>
+                <input type="text" name="name" class="message-formInput" />
+            </div>
+            
+            <div class="message-form-group">
+                <span>你是</span>
+                <label for="male">人</label>
+                <input type="radio" name="sex" id="male" value="human" />
+                <label for="female">吗喽</label>
+                <input type="radio" name="sex" id="female" value="malou" />
+            </div>
+            
+            <div class="message-form-group">
+                <span>学号</span>
+                <input type="text" name="student_id" class="message-formInput" />
+            </div>
+            
+            <div class="message-form-group">
+                <span>邮箱</span>
+                <input type="email" name="email" class="message-formInput" />
+            </div>
+            
+            <div class="message-form-group message-textarea-group">
+                <span>留言</span>
+                <textarea name="message" class="message-formTextArea"></textarea>
+            </div>
+            
+            <div class="message-btnArea">
+                <button type="reset" class="message-resetBth">清空</button>
+                <button type="submit" class="message-submitBth">提交</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="message-footer2">
+        <div>©吗喽版权所有</div>
+    </div>
+</body>
+</html>

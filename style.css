@@ -1,0 +1,907 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; 
+    background: linear-gradient(to bottom, #f4ffc9 0%, #ffb0c9 120%);
+    padding: 0;
+    margin: 0;
+}
+.myarea {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myicon {
+    width: 150px;
+    height: 150px;
+    background-color: wheat;
+    border-radius: 50%;
+    border: 10px solid lightpink;
+    overflow: hidden;
+}
+
+.myIconImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.main {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 5px #ff29ff;
+    padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btnarea {
+    width: 150px;
+    height: 50px;
+    background-color: rgba(82, 180, 255, 0.6);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btnarea:hover {
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.tiaozhuan {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body.blog-page {
+    min-height: 100vh;  
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #f4ffc9 0%, #ffb6c1 120%);
+}
+
+.logarea {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+
+.logarealeft {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    line-height: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    color: hotpink;
+    text-shadow: 3px 3px 5px white;
+    z-index: 1;
+}
+
+.logarearight {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.zhuyebth, .denglubtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.zhuyebth:hover, .denglubtn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.zhuyebth span, .denglubtn span {
+    margin-left: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navarea {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 162, 255, 0.6);
+    border-top: 2px solid white;
+    overflow: hidden;
+}
+
+.navbth {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    color: white;
+}
+
+.navbth a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imgArea {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-25%); }
+    45% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    70% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    95% { transform: translateX(-75%); }
+    100% { transform: translateX(0%); }
+}
+
+.slide-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot:nth-child(1) {
+    animation: dot1 12s infinite;
+}
+.dot:nth-child(2) {
+    animation: dot2 12s infinite;
+}
+.dot:nth-child(3) {
+    animation: dot3 12s infinite;
+}
+.dot:nth-child(4) {
+    animation: dot4 12s infinite;
+}
+
+@keyframes dot1 {
+    0%, 20% { background-color: rgba(255, 255, 255, 0.9); }
+    25%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot2 {
+    0%, 20% { background-color: rgba(255, 255, 255, 0.5); }
+    25%, 45% { background-color: rgba(255, 255, 255, 0.9); }
+    50%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot3 {
+    0%, 45% { background-color: rgba(255, 255, 255, 0.5); }
+    50%, 70% { background-color: rgba(255, 255, 255, 0.9); }
+    75%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+@keyframes dot4 {
+    0%, 70% { background-color: rgba(255, 255, 255, 0.5); }
+    75%, 95% { background-color: rgba(255, 255, 255, 0.9); }
+    100% { background-color: rgba(255, 255, 255, 0.5); }
+}
+
+.titleArea {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.titleArea h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.articleArea {
+    margin-top: 20px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.articleArea p {
+    text-indent: 2em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 16px;
+}
+
+.imfArea {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.myicon2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myicon2 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.myImf {
+    flex: 1;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myImf h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer2 {
+    background-color: transparent;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .myarea {
+        max-width: 400px;
+        margin-top: 150px;
+    }
+    .myicon {
+        width: 200px;
+        height: 200px;
+    }
+    .main {
+        margin-top: 50px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .myarea {
+        max-width: 350px;
+        margin-top: 100px;
+    }
+    .myicon {
+        width: 180px;
+        height: 180px;
+    }
+    .main {
+        margin-top: 40px;
+        line-height: 38px;
+        font-size: 18px;
+    }
+    .myicon2 img {
+        width: 180px;
+        height: 180px;
+    }
+    .myImf h3 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .myarea {
+        width: 95%;
+        max-width: 320px;
+        margin-top: 30px;
+    }
+    .myicon {
+        width: 120px;
+        height: 120px;
+        border-width: 8px;
+    }
+    .main {
+        margin-top: 20px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .btnarea {
+        width: 130px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .tiaozhuan {
+        font-size: 16px;
+    }
+    .logarea {
+        height: 80px;
+    }
+    .logarealeft {
+        line-height: 80px;
+        font-size: 1.5em;
+        left: 10px;
+    }
+    .logarearight {
+        right: 10px;
+    }
+    .zhuyebth span, .denglubtn span {
+        font-size: 12px;
+    }
+    .zhuyebth, .denglubtn {
+        padding: 3px 8px;
+        margin-left: 5px;
+    }
+    .navarea {
+        height: 40px;
+    }
+    .navbth {
+        line-height: 40px;
+        font-size: 11px;
+    }
+    .zhuyebth, .denglubtn {
+        width: 60px;
+        height: 25px;
+        font-size: 12px;
+    }
+    .zhuyebth img, .denglubtn img {
+        width: 15px;
+        height: 15px;
+    }
+    .titleArea h2 {
+        font-size: 24px;
+    }
+    .articleArea {
+        width: 90%;
+        padding: 15px;
+    }
+    .articleArea p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .imfArea {
+        width: 90%;
+        flex-direction: column;
+        padding: 15px;
+		background-color: transparent;
+    }
+    .myicon2 img {
+        width: 150px;
+        height: 150px;
+    }
+    .myImf {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .myImf h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+/* ====== 登录页面样式 ====== */
+body.login-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f4ffc9 0%, #ffb6c1 120%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbox {
+    width: 400px;
+    height: 550px;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding-top: 30px;
+    background-color: rgba(255, 211, 233, 0.8);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-iconarea {
+    width: 150px;
+    height: 150px;
+    border: 10px solid pink;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.login-myIconImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login-inputarea {
+    margin-top: 20px;
+    width: 280px;
+}
+
+.login-inputarea h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.login-usernamearea {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-usernamearea span {
+    font-weight: bold;
+    color: #333;
+}
+
+.login-usernamearea input {
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.login-passwordarea {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-passwordarea span {
+    font-weight: bold;
+    color: #333;
+}
+
+.login-passwordarea input {
+    height: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.login-btnarea {
+    margin-top: 30px;
+    width: 280px;
+}
+
+.login-buttonarea button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgba(82, 180, 255, 0.6);
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-buttonarea button:hover {
+    background-color: rgba(82, 180, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.login-tiaozhuan {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.login-footer2 {
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.back-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    .loginbox {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+        min-height: 500px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    
+    .login-iconarea {
+        width: 120px;
+        height: 120px;
+        border-width: 8px;
+    }
+    
+    .login-inputarea {
+        width: 90%;
+    }
+    
+    .login-usernamearea, .login-passwordarea {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .login-usernamearea input, .login-passwordarea input {
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .login-btnarea {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .loginbox {
+        width: 350px;
+        height: 500px;
+        margin-top: 100px;
+    }
+    
+    .login-iconarea {
+        width: 140px;
+        height: 140px;
+    }
+}
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover .zhuyebth,
+.btn-link:hover .denglubtn {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.zhuyebth, .denglubtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.imgArea {
+    width: 100% !important;
+    height: 310px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.imgArea img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+    display: block !important;
+}
+
+.logarea {
+    width: 100% !important;
+    height: 100px !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.logarealeft {
+    position: absolute !important;
+    left: 20px !important;
+    top: 0 !important;
+    line-height: 100px !important;
+    font-size: 2em !important;
+    font-weight: bold !important;
+    color: hotpink !important;
+    text-shadow: 3px 3px 5px white !important;
+    z-index: 1 !important;
+}
+
+.logarearight {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    height: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 2 !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+}
+
+.zhuyebth, .denglubtn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5px 10px !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 5px !important;
+    margin-left: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    width: 80px !important;
+    height: 30px !important;
+    min-width: 80px !important;
+    min-height: 30px !important;
+    max-width: 80px !important;
+    max-height: 30px !important;
+}
+
+.zhuyebth:hover, .denglubtn:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.zhuyebth span, .denglubtn span {
+    margin-left: 5px !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.zhuyebth img, .denglubtn img {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px !important;
+}
+
+.btn-link {
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.btn-link:hover .zhuyebth,
+.btn-link:hover .denglubtn {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navarea {
+    width: 100% !important;
+    height: 50px !important;
+    background-color: rgba(255, 162, 255, 0.6) !important;
+    border-top: 2px solid white !important;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.navbth {
+    flex: 1 !important;
+    height: 100% !important;
+    text-align: center !important;
+    line-height: 50px !important;
+    font-size: 13px !important;
+}
+
+.navbth a {
+    text-decoration: none !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.navbth a:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.navbth.current-page a {
+    color: hotpink !important;
+    font-weight: bold !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+h2 {
+    color: hotpink !important;
+}
+
+.titlearea h2,
+.hometown-title h2,
+.message-IeaveWoldArea h2 {
+    color: hotpink !important;
+}
+
+.footer, 
+.hometown-footer2, 
+.message-footer2 {
+    background-color: transparent !important;
+    color: #666 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    padding: 30px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 40px !important;
+}
+
+@media screen and (max-width: 767px) {
+    .imgArea {
+        height: 200px !important;
+    }
+    
+    .logarea {
+        height: 80px !important;
+    }
+    
+    .logarealeft {
+        line-height: 80px !important;
+        font-size: 1.5em !important;
+        left: 10px !important;
+    }
+    
+    .logarearight {
+        right: 10px !important;
+        gap: 8px !important;
+    }
+    
+    .zhuyebth, .denglubtn {
+        width: 60px !important;
+        height: 25px !important;
+        min-width: 60px !important;
+        min-height: 25px !important;
+        max-width: 60px !important;
+        max-height: 25px !important;
+        padding: 3px 8px !important;
+        margin-left: 5px !important;
+    }
+    
+    .zhuyebth span, .denglubtn span {
+        font-size: 12px !important;
+    }
+    
+    .zhuyebth img, .denglubtn img {
+        width: 15px !important;
+        height: 15px !important;
+        margin-right: 3px !important;
+    }
+    
+    .navarea {
+        height: 40px !important;
+    }
+    
+    .navbth {
+        line-height: 40px !important;
+        font-size: 11px !important;
+    }
+    
+    .navbth.current-page a {
+        font-weight: bold !important;
+    }
+    
+    .footer, 
+    .hometown-footer2, 
+    .message-footer2 {
+        padding: 20px 0 !important;
+        margin-top: 20px !important;
+        font-size: 12px !important;
+    }
+}

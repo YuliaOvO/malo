@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+body.message-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f4ffc9 0%, #ffb6c1 120%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logarea {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: visible;
+}
+
+.logarealeft {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    line-height: 100px;
+    font-size: 2em;
+    font-weight: bold;
+    color: hotpink;
+    text-shadow: 3px 3px 5px white;
+    z-index: 1;
+}
+
+.logarearight {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.zhuyebth, .denglubtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.zhuyebth:hover, .denglubtn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.zhuyebth span, .denglubtn span {
+    margin-left: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navarea {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 162, 255, 0.6);
+    border-top: 2px solid white;
+    overflow: hidden;
+}
+
+.navbth {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 13px;
+    color: white;
+}
+
+.navbth a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imgArea {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.imgArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.message-IeaveWoldArea {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.message-IeaveWoldArea h2 {
+    color: hotpink;
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.message-IwForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.message-form-group span {
+    font-weight: bold;
+    color: #333;
+    width: 60px;
+}
+
+.message-formInput {
+    width: 320px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.message-form-group label {
+    margin-right: 10px;
+    color: #333;
+}
+
+.message-form-group input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.message-textarea-group {
+    align-items: flex-start;
+}
+
+.message-formTextArea {
+    width: 320px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    resize: vertical;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.message-btnArea {
+    width: 320px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.message-resetBth {
+    width: 100px;
+    height: 30px;
+    background-color: rgba(82, 180, 255, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message-submitBth {
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 105, 180, 0.6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.message-resetBth:hover {
+    background-color: rgba(82, 180, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.message-submitBth:hover {
+    background-color: rgba(255, 105, 180, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.message-footer2 {
+    background-color: transparent;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+.btn-link:hover .zhuyebth,
+.btn-link:hover .denglubtn {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+    .logarea {
+        height: 80px;
+    }
+    
+    .logarealeft {
+        line-height: 80px;
+        font-size: 1.5em;
+        left: 10px;
+    }
+    
+    .logarearight {
+        right: 10px;
+    }
+    
+    .zhuyebth span, .denglubtn span {
+        font-size: 12px;
+    }
+    
+    .zhuyebth, .denglubtn {
+        padding: 3px 8px;
+        margin-left: 5px;
+    }
+    
+    .navarea {
+        height: 40px;
+    }
+    
+    .navbth {
+        line-height: 40px;
+        font-size: 11px;
+    }
+    
+    .zhuyebth, .denglubtn {
+        width: 60px;
+        height: 25px;
+        font-size: 12px;
+    }
+    
+    .zhuyebth img, .denglubtn img {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .imgArea {
+        height: 200px;
+    }
+    
+    .message-IeaveWoldArea {
+        width: 90%;
+        padding: 20px 0;
+    }
+    
+    .message-IeaveWoldArea h2 {
+        font-size: 22px;
+        padding: 0 15px;
+    }
+    
+    .message-form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .message-form-group span {
+        margin-bottom: 5px;
+    }
+    
+    .message-formInput {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .message-formTextArea {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .message-btnArea {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .message-resetBth, .message-submitBth {
+        width: 100%;
+    }
+    
+    .message-footer2 {
+        padding: 20px 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .message-IeaveWoldArea {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logarea {
+        height: 100px;
+    }
+    
+    .logarealeft {
+        line-height: 100px;
+        font-size: 2em;
+    }
+}
